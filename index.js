@@ -3,7 +3,7 @@ var cheerio = require('cheerio');
 var fs      = require('fs');
 var scraper = require('./scraper.js');
 
-var urls = fs.readFileSync('/dev/stdin').toString().split('\r\n');
+var urls = fs.readFileSync('/dev/stdin').toString().split('\n');
 
 function scrape(index) {
 
