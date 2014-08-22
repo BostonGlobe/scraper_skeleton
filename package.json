@@ -1,0 +1,9 @@
+{
+  "name": "scraper_skeleton",
+  "version": "0.0.0",
+  "dependencies": {
+    "cheerio": "^0.17.0",
+    "request": "^2.40.0"
+  },
+  "devDependencies": {}
+}

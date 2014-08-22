@@ -1,4 +1,1 @@
-scraper_skeleton
-================
-
-Node scraper skeleton.
+# scraper_skeleton
