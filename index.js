@@ -2,6 +2,8 @@ var request = require('request');
 var cheerio = require('cheerio');
 var fs      = require('fs');
 var scraper = require('./scraper.js');
+var _       = require('lodash');
+var argv    = require('yargs').argv;
 
 var urls = fs.readFileSync('/dev/stdin').toString().split('\n');
 
@@ -18,8 +20,20 @@ function scrape(index) {
 			var datum = scraper.scraper($);
 			datum.index = index;
 
-			// print out results
-			console.log(JSON.stringify(datum, null, 4));
+			if (argv.flatten) {
+
+				// print out results
+				_.each(datum, function(value, index, array) {
+					console.log(JSON.stringify(value, null, 4));
+
+					if (index < (array.length - 1)) {
+						console.log(',');
+					}
+				});
+
+			} else {
+				console.log(JSON.stringify(_.flatten(datum), null, 4));
+			}
 
 		}
 

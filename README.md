@@ -40,6 +40,10 @@ module.exports.scraper = function ($) {
 ]
 ```
 
+### NOTE
+
+If the page is a collection of items, pass in `--flatten`.
+
 ## License
 
 MIT © [The Boston Globe](http://github.com/BostonGlobe)
