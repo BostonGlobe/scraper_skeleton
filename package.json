@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "dependencies": {
     "cheerio": "^0.17.0",
+    "lodash": "^2.4.1",
     "request": "^2.40.0"
   },
   "devDependencies": {}
