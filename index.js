@@ -32,7 +32,7 @@ function scrape(index) {
 				});
 
 			} else {
-				console.log(JSON.stringify(_.flatten(datum), null, 4));
+				console.log(JSON.stringify(datum, null, 4));
 			}
 
 		}
